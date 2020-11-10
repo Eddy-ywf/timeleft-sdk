@@ -1,5 +1,5 @@
-import { DreamResponse } from "./IDreamResponse";
-import { ImageResponse } from "./IImageResponse";
+import DreamResponse from "./IDreamResponse";
+import ImageResponse from "./IImageResponse";
 
 export default interface MyProfileResponse {
   uid: string;

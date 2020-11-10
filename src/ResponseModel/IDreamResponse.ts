@@ -1,7 +1,7 @@
-import { ImageResponse } from "./IImageResponse";
-import { LanguageResponse } from "./ILanguageResponse";
+import ImageResponse from "./IImageResponse";
+import LanguageResponse  from "./ILanguageResponse";
 
-export interface DreamResponse {
+export default interface DreamResponse {
   uid: string;
   creationDate: string;
   categoryUid?: string;

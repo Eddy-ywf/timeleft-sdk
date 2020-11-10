@@ -1,4 +1,4 @@
-export interface ImageResponse {
+export default interface ImageResponse {
   uid?: string;
   url: string;
   name?: string;
