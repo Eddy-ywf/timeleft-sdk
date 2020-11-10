@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timeleft SDK Client</title>
+</head>
+<body>
+<script src="timeleft-sdk.js"></script>
+<script>
+    /** @type {VehicleApi} */
+    const token = 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjJmOGI1NTdjMWNkMWUxZWM2ODBjZTkyYWFmY2U0NTIxMWUxZTRiNDEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiZWRkeSIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS90aW1lbGVmdC03ZmE4MyIsImF1ZCI6InRpbWVsZWZ0LTdmYTgzIiwiYXV0aF90aW1lIjoxNjA0NTg4NjA1LCJ1c2VyX2lkIjoiekNrZmZ0Z010UVV1THQwVmRYbzQ1bGY0T3dqMSIsInN1YiI6InpDa2ZmdGdNdFFVdUx0MFZkWG80NWxmNE93ajEiLCJpYXQiOjE2MDQ5OTAwODEsImV4cCI6MTYwNDk5MzY4MSwiZW1haWwiOiJlZGR5ZW5jbGF2ZUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiZWRkeWVuY2xhdmVAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.JaVgYP_FhJXLJAfxvWv3crHnoLelKZer74uIr-Tnowk0YkkQUggXCsn-XZdYng3XCfYxbx1a-N6LvkOwheYdcM6dWuX7SOOPAKAXOEf40JCZ-hJfM5nLLgLJhtcCHSOWXTj30uGqCMJVQplwPSGs3ar5iYJL3Un6u6TsL3iEfG-E-CI8i3zs1Kyr9_myS0IitCoxdaF-lxTI7taAn23Cj77nva94Juw_qwguYB_nipsYY6vhOGLuwjqiosBDbyc3PYELSbcZMVbQqNU14B8G7heez1aAfvWMVETEPZLLA-I23bdWDXdODNn7t9yS9gwcD8aGOrGVz22JfCv0gSO7vw';
+
+    const userAPI = new UserAPI('development', token);
+
+    userAPI.getUserProfile().then(
+        result => {
+            console.log(result);
+        }
+    ).catch( err => {
+        console.log(err)
+    })
+</script>
+</body>
+</html>
