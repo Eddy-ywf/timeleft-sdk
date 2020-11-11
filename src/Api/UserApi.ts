@@ -11,7 +11,7 @@ class UserApi extends AbstractApi {
   // --------------------------------------------------------------------------------------------
 
   public getUserProfile(): AxiosPromise<IUserProfileResponse> {
-    return this.http.post('do_get_my_profile');
+    return this.http.post('do_get_my_profile', {"data":{}});
   }
 
   public updateUserProfile(profileData: IUserProfileUpdateRequest): AxiosPromise<IGeneralResponse> {
