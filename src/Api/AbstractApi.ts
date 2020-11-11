@@ -31,7 +31,7 @@ abstract class AbstractApi {
   /**
    * @since v2.0.0
    */
-  public constructor(env: string, token?: string) {
+  public constructor(env: string, authorization?: string) {
     let baseUrl: string;
 
     switch (env) {
@@ -56,10 +56,10 @@ abstract class AbstractApi {
 
     let headers = {};
 
-    if (typeof token !== 'undefined') {
+    if (typeof authorization !== 'undefined') {
       headers = {
         ...headers,
-        token,
+        authorization,
       };
     }
 
