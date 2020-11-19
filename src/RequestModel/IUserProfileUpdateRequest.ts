@@ -1,6 +1,9 @@
-import IAddress from '../Model/IAddress';
-import IUserProfileResponse from '../ResponseModel/IUserProfileResponse';
-
-export interface IUserProfileUpdateRequest extends IUserProfileResponse {
-  address?: IAddress;
+export default interface UserRequest {
+  alias?: string;
+  description?: string;
+  gender?: 'male' | 'female';
+  language?: 'fr-FR' | 'en-EN';
+  availableToHelp?: boolean;
+  cguAccepted?: boolean;
+  birthdate?: string;
 }
