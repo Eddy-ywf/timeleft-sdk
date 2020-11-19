@@ -16,7 +16,7 @@ class QuestionAPI extends AbstractApi {
   }
 
   public createAnswer(requestData: CreateAnswerRequest): AxiosPromise<CreateAnswerResponse> {
-    return this.http.post('questions-do_create_answer_to_question', requestData);
+    return this.http.post('questions-do_create_answer_to_question', {"data": requestData});
   }
 }
 
