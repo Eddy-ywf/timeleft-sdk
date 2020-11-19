@@ -23,3 +23,16 @@ import MyProfileResponse from '@timeleft/sdk-typescript/src/ResponseModel/IUserP
 ## updateUserProfile
     const profileData: IUserProfileUpdateRequest = { ... };
     userApi.updateUserProfile(profileData).then(...)
+
+2. Category API
+import { AxiosResponse } from 'axios';
+import CategoryApi from '@timeleft/sdk-typescript/src/Api/CategoryApi';
+import IDreamsOfCategoryResponse from '@timeleft/sdk-typescript/src/ResponseModel/IDreamOfCategoryResponse';
+
+    const categoryApi = new CategoryApi('development', token);
+
+    categoryApi.getDreamByCategory().then(
+      (response: AxiosResponse<IDreamsOfCategoryResponse>) => {
+        // do something here
+      }
+    )
