@@ -1,4 +1,4 @@
-import LanguageResponse from "./ILanguageResponse";
+import LanguageResponse from './ILanguageResponse';
 
 export default interface EmojiResponse {
   uid: string;

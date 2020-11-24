@@ -1,4 +1,4 @@
-import ImageResponse from "./IImageResponse";
+import ImageResponse from './IImageResponse';
 
 export interface UserPublic {
   uid: string;

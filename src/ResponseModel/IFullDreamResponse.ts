@@ -4,7 +4,7 @@ import LanguageResponse from './ILanguageResponse';
 import QuestionResponse from './IQuestionResponse';
 import { UserPublic } from './IUserPublicResponse';
 
-export default interface EasyResponse {
+export default interface FullDreamResponse {
   uid: string;
   creationDate: string;
   categoryUid?: string;
