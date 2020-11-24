@@ -1,4 +1,4 @@
 export default interface StandardPaginationResponse {
-  currentPage: number,
-  maxPage: number,
+  currentPage: number;
+  maxPage: number;
 }

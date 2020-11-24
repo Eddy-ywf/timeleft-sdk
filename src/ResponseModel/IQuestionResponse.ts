@@ -1,5 +1,5 @@
-import AnswerResponse from "./IAnswerResponse";
-import { UserPublic } from "./IUserPublicResponse";
+import AnswerResponse from './IAnswerResponse';
+import { UserPublic } from './IUserPublicResponse';
 
 export default interface QuestionResponse {
   uid: string;

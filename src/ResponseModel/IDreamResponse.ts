@@ -1,5 +1,5 @@
-import ImageResponse from "./IImageResponse";
-import LanguageResponse  from "./ILanguageResponse";
+import ImageResponse from './IImageResponse';
+import LanguageResponse from './ILanguageResponse';
 
 export default interface DreamResponse {
   uid: string;
@@ -12,5 +12,4 @@ export default interface DreamResponse {
   usersLikesCounter: number;
   createdBy: string;
   isEasy: boolean;
-
 }

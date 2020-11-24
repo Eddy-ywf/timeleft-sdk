@@ -5,13 +5,13 @@ import InteractionResponse from '../ResponseModel/IInteractionResponse';
 
 class InteractionApi extends AbstractApi {
 
-    // --------------------------------------------------------------------------------------------
-    // Public methods
-    // --------------------------------------------------------------------------------------------
+  // --------------------------------------------------------------------------------------------
+  // Public methods
+  // --------------------------------------------------------------------------------------------
 
-    public createInteraction(requestData: InteractionRequest): AxiosPromise<InteractionResponse> {
-        return this.http.post('interactions-do_create_interaction', {"data": requestData});
-      }
+  public createInteraction(requestData: InteractionRequest): AxiosPromise<InteractionResponse> {
+      return this.http.post('interactions-do_create_interaction', {"data": requestData});
+  }
 }
 
 export default InteractionApi;

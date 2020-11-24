@@ -1,5 +1,5 @@
-import AudioRequest from "./IAudioRequest";
-import ImageRequest from "./IImageRequest";
+import AudioRequest from './IAudioRequest';
+import ImageRequest from './IImageRequest';
 
 export default interface AddFeelingRequest {
   title?: string;

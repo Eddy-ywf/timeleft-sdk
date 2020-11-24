@@ -1,8 +1,8 @@
-import FeelingResponse from "./IFeelingResponse";
-import ImageResponse from "./IImageResponse";
-import LanguageResponse from "./ILanguageResponse";
-import QuestionResponse from "./IQuestionResponse";
-import { UserPublic } from "./IUserPublicResponse";
+import FeelingResponse from './IFeelingResponse';
+import ImageResponse from './IImageResponse';
+import LanguageResponse from './ILanguageResponse';
+import QuestionResponse from './IQuestionResponse';
+import { UserPublic } from './IUserPublicResponse';
 
 export default interface EasyResponse {
   uid: string;
@@ -14,7 +14,6 @@ export default interface EasyResponse {
   usersDoneCounter: number;
   usersLikesCounter: number;
   isEasy: boolean;
-
   createdBy: UserPublic;
   likedBy: UserPublic[];
   doneBy: UserPublic[];

@@ -1,3 +1,3 @@
 export default interface InteractionResponse {
-  info: "ok";
+  info: 'ok';
 }

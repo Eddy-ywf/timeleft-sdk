@@ -1,4 +1,4 @@
-import LanguageRequest from "./ILanguageRequest";
+import LanguageRequest from './ILanguageRequest';
 
 export default interface EmojiRequest {
   icon: string;

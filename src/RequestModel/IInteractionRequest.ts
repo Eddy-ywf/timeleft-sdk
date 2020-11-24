@@ -1,6 +1,6 @@
 export default interface InteractionRequest {
-  action: "up" | "down";
+  action: 'up' | 'down';
   targetUid: string;
-  type: "question" | "feeling";
+  type: 'question' | 'feeling';
   dreamUid: string;
 }

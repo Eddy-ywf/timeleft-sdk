@@ -1,4 +1,4 @@
-import EmojiResponse from "./IEmojiResponse";
+import EmojiResponse from './IEmojiResponse';
 
 export default interface GetEmojisResponse {
   emojis: EmojiResponse[];

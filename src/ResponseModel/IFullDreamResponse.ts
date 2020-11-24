@@ -14,7 +14,6 @@ export default interface FullDreamResponse {
   usersDoneCounter: number;
   usersLikesCounter: number;
   isEasy: boolean;
-
   createdBy: UserPublic;
   likedBy: UserPublic[];
   doneBy: UserPublic[];

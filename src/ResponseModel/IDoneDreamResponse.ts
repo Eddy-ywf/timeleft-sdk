@@ -1,3 +1,3 @@
 export default interface DoneDreamResponse {
-  info: 'ok'
+  info: 'ok';
 }
