@@ -14,6 +14,8 @@ import DoneDreamsRequest from '../RequestModel/IMyDoneDreamRequest';
 import ShuffleRequest from '../RequestModel/ISuffleRequest';
 import ShuffleResponse from '../ResponseModel/IShuffleResponse';
 import EasyResponse from '../ResponseModel/IEasyDreamResponse';
+import GetDreamByUidRequest from '../RequestModel/IGetDreamByUidRequest';
+import GetDreamByUidResponse from '../ResponseModel/IGetDreamByUidResponse';
 
 class DreamApi extends AbstractApi {
 
@@ -51,6 +53,10 @@ class DreamApi extends AbstractApi {
 
   public getEasyDream(): AxiosPromise<EasyResponse> {
     return this.http.post('dreams-do_get_easy_dreams', {"data": {}});
+  }
+
+  public getDreamByUid(requestData: GetDreamByUidRequest): AxiosPromise<GetDreamByUidResponse> {
+    return this.http.post('dreams-do_get_dream_by_uid', {"data": requestData});
   }
 }
 
