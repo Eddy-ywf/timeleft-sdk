@@ -1,7 +1,7 @@
 import AbstractApi from './AbstractApi';
 import { AxiosPromise } from 'axios';
-import IDreamRequest from '../RequestModel/IDreamRequest';
-import IDreamResponse from '../ResponseModel/IDreamResponse';
+import DreamRequest from '../RequestModel/IDreamRequest';
+import DreamResponse from '../ResponseModel/IDreamResponse';
 import LikeRequest from '../RequestModel/ILikeDreamRequest';
 import LikeResponse from '../ResponseModel/ILikeDreamResponse';
 import DislikeRequest from '../RequestModel/IDislikeDreamRequest';
@@ -23,7 +23,7 @@ class DreamApi extends AbstractApi {
   // Public methods
   // --------------------------------------------------------------------------------------------
 
-  public createDream(requestData: IDreamRequest): AxiosPromise<IDreamResponse> {
+  public createDream(requestData: DreamRequest): AxiosPromise<DreamResponse> {
     return this.http.post('do_create_dream', {"data": requestData});
   }
 
