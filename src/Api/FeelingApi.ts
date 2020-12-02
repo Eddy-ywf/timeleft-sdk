@@ -7,9 +7,9 @@ import AddFeelingRequest from '../RequestModel/IAddFeelingRequest';
 import GetFeelingsOfDreamResponse from '../ResponseModel/IGetFeelingOfDreamResponse';
 import EmojisCountersRequest from '../RequestModel/IEmojiCountersRequest';
 import EmojisCountersResponse from '../ResponseModel/IEmojiCountersResponse';
-import GetFeelingsOfDreamRequest from '../RequestModel/IGetFeelingOfDream';
+import GetFeelingsOfDreamRequest from '../RequestModel/IGetFeelingOfDreamRequest';
 
-class FeelingAPI extends AbstractApi {
+class FeelingApi extends AbstractApi {
 
   // --------------------------------------------------------------------------------------------
   // Public methods
@@ -36,4 +36,4 @@ class FeelingAPI extends AbstractApi {
   }
 }
 
-export default FeelingAPI;
+export default FeelingApi;
