@@ -11,7 +11,7 @@ import DoneDreamResponse from '../ResponseModel/IDoneDreamResponse';
 import LikedDreamsRequest from '../RequestModel/IMyLikeDreamRequest';
 import LikedDreamsResponse from '../ResponseModel/IMyLikeDreamResponse';
 import DoneDreamsRequest from '../RequestModel/IMyDoneDreamRequest';
-import ShuffleRequest from '../RequestModel/ISuffleRequest';
+import ShuffleRequest from '../RequestModel/IShuffleRequest';
 import ShuffleResponse from '../ResponseModel/IShuffleResponse';
 import EasyResponse from '../ResponseModel/IEasyDreamResponse';
 import GetDreamByUidRequest from '../RequestModel/IGetDreamByUidRequest';

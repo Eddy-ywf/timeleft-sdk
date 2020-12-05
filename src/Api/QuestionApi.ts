@@ -5,7 +5,7 @@ import CreateQuestionResponse from '../ResponseModel/ICreateQuestionResponse';
 import CreateAnswerRequest from '../RequestModel/ICreateAnswerRequest';
 import CreateAnswerResponse from '../ResponseModel/ICreateAnswerResponse';
 
-class QuestionAPI extends AbstractApi {
+class QuestionApi extends AbstractApi {
 
   // --------------------------------------------------------------------------------------------
   // Public methods
@@ -20,4 +20,4 @@ class QuestionAPI extends AbstractApi {
   }
 }
 
-export default QuestionAPI;
+export default QuestionApi;

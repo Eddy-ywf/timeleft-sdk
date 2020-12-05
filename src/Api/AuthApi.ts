@@ -3,7 +3,7 @@ import { AxiosPromise } from 'axios';
 import ChangePasswordRequest from '../RequestModel/IChangePasswordRequest';
 import ChangePasswordResponse from '../ResponseModel/IChangePasswordResponse';
 
-class AuthAPI extends AbstractApi {
+class AuthApi extends AbstractApi {
 
   // --------------------------------------------------------------------------------------------
   // Public methods
@@ -14,4 +14,4 @@ class AuthAPI extends AbstractApi {
   }
 }
 
-export default AuthAPI;
+export default AuthApi;
