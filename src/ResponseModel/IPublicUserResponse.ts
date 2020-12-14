@@ -1,5 +1,5 @@
-import DreamResponse from "./IDreamResponse";
-import ImageResponse from "./IImageResponse";
+import DreamResponse from './IDreamResponse';
+import ImageResponse from './IImageResponse';
 
 export default interface PublicProfileResponse {
   uid: string;
@@ -9,7 +9,7 @@ export default interface PublicProfileResponse {
   description?: string;
   gender?: 'male' | 'female';
   availableToHelp?: boolean;
-  likes: DreamResponse[],
-  done: DreamResponse[],
+  likes: DreamResponse[];
+  done: DreamResponse[];
   points: number;
 }

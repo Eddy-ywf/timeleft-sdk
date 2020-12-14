@@ -14,7 +14,7 @@ export default interface MyProfileResponse {
   cguAccepted: boolean;
   creationDate: string;
   birthdate?: string;
-  likes: DreamResponse[],
-  done: DreamResponse[],
+  likes: DreamResponse[];
+  done: DreamResponse[];
   points: number;
 }

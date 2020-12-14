@@ -1,6 +1,6 @@
 import AbstractApi from './AbstractApi';
 import { AxiosPromise } from 'axios';
-import DreamsOfCategoryRequest from '../RequestModel/IDreamOfCatergoryRequest';
+import DreamsOfCategoryRequest from '../RequestModel/IDreamOfCategoryRequest';
 import DreamsOfCategoryResponse from '../ResponseModel/IDreamOfCategoryResponse';
 import GetAllCategoriesResponse from '../ResponseModel/IGetAllCategoriesResponse';
 

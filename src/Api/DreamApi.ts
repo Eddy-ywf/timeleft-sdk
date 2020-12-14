@@ -16,6 +16,10 @@ import ShuffleResponse from '../ResponseModel/IShuffleResponse';
 import EasyResponse from '../ResponseModel/IEasyDreamResponse';
 import GetDreamByUidRequest from '../RequestModel/IGetDreamByUidRequest';
 import GetDreamByUidResponse from '../ResponseModel/IGetDreamByUidResponse';
+import LatestDreamsRequest from '../RequestModel/IGetLatestDreamsRequest';
+import LatestDreamsResponse from '../ResponseModel/IGetLatestDreamsResponse';
+import PopularDreamsRequest from '../RequestModel/IGetPopularDreamsRequest';
+import PopularDreamsResponse from '../ResponseModel/IGetPopularDreamsResponse';
 
 class DreamApi extends AbstractApi {
 
@@ -24,39 +28,47 @@ class DreamApi extends AbstractApi {
   // --------------------------------------------------------------------------------------------
 
   public createDream(requestData: DreamRequest): AxiosPromise<DreamResponse> {
-    return this.http.post('do_create_dream', {"data": requestData});
+    return this.http.post('dreams-do_create_dream', { "data": requestData });
   }
 
   public likeDream(requestData: LikeRequest): AxiosPromise<LikeResponse> {
-    return this.http.post('do_like_dream', {"data": requestData});
+    return this.http.post('dreams-do_like_dream', { "data": requestData });
   }
 
   public dislikeDream(requestData: DislikeRequest): AxiosPromise<DislikeResponse> {
-    return this.http.post('do_dislike_dream', {"data": requestData});
+    return this.http.post('dreams-do_dislike_dream', { "data": requestData });
   }
 
   public makeDreamDone(requestData: DoneRequest): AxiosPromise<DoneDreamResponse> {
-    return this.http.post('do_declare_dream_done', {"data": requestData});
+    return this.http.post('dreams-do_declare_dream_done', { "data": requestData });
   }
 
   public getMyLikeDreams(requestData: LikedDreamsRequest): AxiosPromise<LikedDreamsResponse> {
-    return this.http.post('do_get_liked_dreams', {"data": requestData});
+    return this.http.post('dreams-do_get_liked_dreams', { "data": requestData });
   }
 
   public getMyDoneDreams(requestData: DoneDreamsRequest): AxiosPromise<DoneDreamResponse> {
-    return this.http.post('do_get_done_dreams', {"data": requestData});
+    return this.http.post('dreams-do_get_done_dreams', { "data": requestData });
   }
 
   public getShuffle(requestData: ShuffleRequest): AxiosPromise<ShuffleResponse> {
-    return this.http.post('do_get_shuffle', {"data": requestData});
+    return this.http.post('dreams-do_get_shuffle', { "data": requestData });
   }
 
   public getEasyDream(): AxiosPromise<EasyResponse> {
-    return this.http.post('dreams-do_get_easy_dreams', {"data": {}});
+    return this.http.post('dreams-do_get_easy_dreams', { "data": {} });
   }
 
   public getDreamByUid(requestData: GetDreamByUidRequest): AxiosPromise<GetDreamByUidResponse> {
-    return this.http.post('dreams-do_get_dream_by_uid', {"data": requestData});
+    return this.http.post('dreams-do_get_dream_by_uid', { "data": requestData });
+  }
+
+  public getLatestDreams(requestData: LatestDreamsRequest): AxiosPromise<LatestDreamsResponse> {
+    return this.http.post('dreams-do_get_latest_dreams', { "data": requestData });
+  }
+
+  public getPopularDreamsOfWeek(requestData: PopularDreamsRequest): AxiosPromise<PopularDreamsResponse> {
+    return this.http.post('dreams-do_get_popular_dreams_of_the_week', { "data": requestData });
   }
 }
 

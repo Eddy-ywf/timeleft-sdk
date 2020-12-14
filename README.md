@@ -84,6 +84,10 @@ HOW TO USE SDK
     import IEasyResponse from '@timeleft/sdk-typescript/src/ResponseModel/IEasyDreamResponse';
     import IGetDreamByUidRequest from '@timeleft/sdk-typescript/src/RequestModel/IGetDreamByUidRequest';
     import IGetDreamByUidResponse from '@timeleft/sdk-typescript/src/ResponseModel/IGetDreamByUidResponse';
+    import ILatestDreamsRequest from '@timeleft/sdk-typescript/src/RequestModel/IGetLatestDreamsRequest';
+    import ILatestDreamsResponse from '@timeleft/sdk-typescript/src/ResponseModel/IGetLatestDreamsResponse';
+    import IPopularDreamsRequest from '@timeleft/sdk-typescript/src/RequestModel/IGetPopularDreamsRequest';
+    import IPopularDreamsResponse from '@timeleft/sdk-typescript/src/ResponseModel/IGetPopularDreamsResponse';
 
     const dreamApi = new DreamApi('development', token);
 
@@ -165,7 +169,25 @@ HOW TO USE SDK
       (response: AxiosResponse<IGetDreamByUidResponse>) => {
         // do something here
       }
-    )F
+    )
+
+## Get Latest Dreams
+
+    const getLatestDreamsData: ILatestDreamsRequest = { ... };
+    dreamApi.getLatestDreams(getLatestDreamsData).then(
+      (response: AxiosResponse<ILatestDreamsResponse>) => {
+        // do something here
+      }
+    )
+
+## Get Popular Dreams Of The Week
+
+    const getPopularDreamsOfWeekData: IPopularDreamsRequest = { ... };
+    dreamApi.getPopularDreamsOfWeek(getPopularDreamsOfWeekData).then(
+      (response: AxiosResponse<IPopularDreamsResponse>) => {
+        // do something here
+      }
+    )
 
 # 4. Question API
 
