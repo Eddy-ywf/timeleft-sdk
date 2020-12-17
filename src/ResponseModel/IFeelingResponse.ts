@@ -12,4 +12,6 @@ export default interface FeelingResponse {
   images: ImageResponse[];
   audios: AudioResponse[];
   dreamUid: string;
+  uid: string;
+  likesTotal: number;
 }
