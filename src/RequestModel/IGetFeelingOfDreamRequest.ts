@@ -1,4 +1,4 @@
 export default interface GetFeelingsOfDreamRequest {
-  reamUid: string;
+  dreamUid: string;
   limitToFirst: boolean;
 }
