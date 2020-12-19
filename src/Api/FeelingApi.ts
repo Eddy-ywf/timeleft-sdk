@@ -4,6 +4,7 @@ import EmojiRequest from '../RequestModel/IEmojiRequest';
 import EmojiResponse from '../ResponseModel/IEmojiResponse';
 import GetEmojisResponse from '../ResponseModel/IGetEmojisResponse';
 import AddFeelingRequest from '../RequestModel/IAddFeelingRequest';
+import AddFeelingResponse from '../ResponseModel/IAddFeelingResponse';
 import GetFeelingsOfDreamResponse from '../ResponseModel/IGetFeelingOfDreamResponse';
 import EmojisCountersRequest from '../RequestModel/IEmojiCountersRequest';
 import EmojisCountersResponse from '../ResponseModel/IEmojiCountersResponse';
@@ -23,7 +24,7 @@ class FeelingApi extends AbstractApi {
     return this.http.post('feelings-do_get_all_emojis', {"data": {}});
   }
 
-  public addFeeling(requestData: AddFeelingRequest): AxiosPromise<GetFeelingsOfDreamResponse> {
+  public addFeeling(requestData: AddFeelingRequest): AxiosPromise<AddFeelingResponse> {
     return this.http.post('feelings-do_add_feeling', {"data": requestData});
   }
 

@@ -1,6 +1,6 @@
 import ImageResponse from './IImageResponse';
 
-export interface UserPublic {
+export default interface UserResponse {
   uid: string;
   alias: string;
   img?: ImageResponse;
@@ -8,9 +8,10 @@ export interface UserPublic {
   description?: string;
   gender?: 'male' | 'female';
   availableToHelp?: boolean;
+  email: string;
+  language: 'fr-FR' | 'en-EN';
+  cguAccepted: boolean;
+  creationDate: string;
+  birthdate?: string;
   points: number;
-}
-
-export interface UserPartial {
-  alias: string;
 }

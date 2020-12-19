@@ -12,14 +12,17 @@ HOW TO USE SDK
     import { AxiosResponse } from 'axios';
     import UserApi from '@timeleft/sdk-typescript/src/Api/UserApi';
     import IUserProfileUpdateRequest from '@timeleft/sdk-typescript/src/RequestModel/IUserProfileUpdateRequest';
-    import IUserProfileResponse from '@timeleft/sdk-typescript/src/ResponseModel/IUserProfileResponse';
+    import IUserResponse from '@timeleft/sdk-typescript/src/ResponseModel/IUserResponse';
+    import IMyProfileResponse from '@timeleft/sdk-typescript/src/ResponseModel/IMyProfileResponse';
+    import IPublicUserRequest from '@timeleft/sdk-typescript/src/RequestModel/IPublicUserRequest';
+    import IPublicUserResponse from '@timeleft/sdk-typescript/src/ResponseModel/IPublicUserResponse';
 
     const userApi = new UserApi('development', token);
 
 ## Get User Information
 
     userApi.getUserProfile().then(
-      (response: AxiosResponse<IUserProfileResponse>) => {
+      (response: AxiosResponse<IMyProfileResponse>) => {
         // do something here
       }
     )
@@ -28,7 +31,16 @@ HOW TO USE SDK
 
     const profileData: IUserProfileUpdateRequest = { ... };
     userApi.updateUserProfile(profileData).then(
-      (response: AxiosResponse<IUserProfileResponse>) => {
+      (response: AxiosResponse<IUserResponse>) => {
+        // do something here
+      }
+    )
+
+## Get User By Uid
+
+    const publicProfileData: IPublicUserRequest = { ... };
+    userApi.getUserByUid(publicProfileData).then(
+      (response: AxiosResponse<IPublicUserResponse>) => {
         // do something here
       }
     )
@@ -230,6 +242,7 @@ HOW TO USE SDK
     import IEmojiResponse from '@timeleft/sdk-typescript/src/ResponseModel/IEmojiResponse';
     import IGetEmojisResponse from '@timeleft/sdk-typescript/src/ResponseModel/IGetEmojisResponse';
     import IAddFeelingRequest from '@timeleft/sdk-typescript/src/RequestModel/IAddFeelingRequest';
+    import IAddFeelingResponse from '@timeleft/sdk-typescript/src/ResponseModel/IAddFeelingResponse';
     import IGetFeelingsOfDreamResponse from '@timeleft/sdk-typescript/src/ResponseModel/IGetFeelingOfDreamResponse';
     import IGetFeelingsOfDreamRequest from '@timeleft/sdk-typescript/src/RequestModel/IGetFeelingOfDreamRequest';
     import IEmojisCountersRequest from '@timeleft/sdk-typescript/src/RequestModel/IEmojiCountersRequest';
@@ -258,7 +271,7 @@ HOW TO USE SDK
 
     const addFeelingData: IAddFeelingRequest = { ... };
     feelingApi.addFeeling(addFeelingData).then(
-      (response: AxiosResponse<IGetFeelingsOfDreamResponse>) => {
+      (response: AxiosResponse<IAddFeelingResponse>) => {
         // do something here
       }
     )
@@ -289,6 +302,7 @@ HOW TO USE SDK
     import InteractionApi from '@timeleft/sdk-typescript/src/Api/InteractionApi';
     import IInteractionRequest from '@timeleft/sdk-typescript/src/RequestModel/IInteractionRequest';
     import IInteractionResponse from '@timeleft/sdk-typescript/src/ResponseModel/IInteractionResponse';
+    import IOrganisedUserInteractionsResponse from '@timeleft/sdk-typescript/src/ResponseModel/IOrganisedUserInteractionsResponse';
 
     const interactionApi = new InteractionApi('development', token);
 
@@ -297,6 +311,14 @@ HOW TO USE SDK
     const interactionData: IInteractionRequest = { ... };
     interactionApi.createInteraction(interactionData).then(
       (response: AxiosResponse<IInteractionResponse>) => {
+        // do something here
+      }
+    )
+
+## Get All Interactions
+
+    interactionApi.getAllInteractions().then(
+      (response: AxiosResponse<IOrganisedUserInteractionsResponse>) => {
         // do something here
       }
     )

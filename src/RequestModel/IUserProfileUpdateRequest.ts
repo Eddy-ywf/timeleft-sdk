@@ -6,4 +6,7 @@ export default interface UserRequest {
   availableToHelp?: boolean;
   cguAccepted?: boolean;
   birthdate?: string;
+  uid?: string;
+  imageUrl?: string;
+  email?: string;
 }

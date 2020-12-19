@@ -1,4 +1,4 @@
-import FeelingResponse from './IFeelingResponse';
+import { FeelingResponse } from './IFeelingResponse';
 
 export default interface GetFeelingsOfDreamResponse {
   feelings: FeelingResponse[];
