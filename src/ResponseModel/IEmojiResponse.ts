@@ -5,4 +5,5 @@ export default interface EmojiResponse {
   creationDate: string;
   icon: string;
   content: LanguageResponse[];
+  background: string;
 }

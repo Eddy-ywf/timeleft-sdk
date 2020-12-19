@@ -1,4 +1,4 @@
-import FeelingResponse from './IFeelingResponse';
+import { FeelingResponse } from './IFeelingResponse';
 import ImageResponse from './IImageResponse';
 import LanguageResponse from './ILanguageResponse';
 import QuestionResponse from './IQuestionResponse';

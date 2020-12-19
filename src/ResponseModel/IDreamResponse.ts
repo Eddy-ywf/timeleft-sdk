@@ -10,6 +10,5 @@ export default interface DreamResponse {
   image?: ImageResponse;
   usersDoneCounter: number;
   usersLikesCounter: number;
-  createdBy: string;
   isEasy: boolean;
 }

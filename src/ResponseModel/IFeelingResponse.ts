@@ -3,7 +3,7 @@ import EmojiResponse from './IEmojiResponse';
 import ImageResponse from './IImageResponse';
 import { UserPublic } from './IUserPublicResponse';
 
-export default interface FeelingResponse {
+export interface FeelingResponse {
   userUid: string;
   user?: UserPublic;
   title?: string;
@@ -12,4 +12,14 @@ export default interface FeelingResponse {
   images: ImageResponse[];
   audios: AudioResponse[];
   dreamUid: string;
+  uid: string;
+  likesTotal: number;
+}
+
+export interface FeelingPartialResponse {
+  title?: string;
+  emojis?: EmojiResponse[];
+  images: ImageResponse[];
+  audios: AudioResponse[];
+  likesTotal: number;
 }
