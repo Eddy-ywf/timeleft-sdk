@@ -52,7 +52,7 @@ class DreamApi extends AbstractApi {
   }
 
   public getShuffle(requestData: ShuffleRequest): AxiosPromise<ShuffleResponse> {
-    return this.http.post('dreams-do_get_shuffle', { "data": requestData });
+    return this.http.get('dreams-do_get_shuffle', { params: { ...requestData } });
   }
 
   public getEasyDream(): AxiosPromise<EasyResponse> {
