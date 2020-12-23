@@ -1,3 +1,4 @@
 export default interface LatestDreamsRequest {
-  qty: number;
+  itemsPerPage: number;
+  pageRequested: number;
 }
