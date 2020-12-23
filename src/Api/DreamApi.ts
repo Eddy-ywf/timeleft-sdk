@@ -60,7 +60,7 @@ class DreamApi extends AbstractApi {
   }
 
   public getDreamByUid(requestData: GetDreamByUidRequest): AxiosPromise<GetDreamByUidResponse> {
-    return this.http.post('dreams-do_get_dream_by_uid', { "data": requestData });
+    return this.http.get('dreams-do_get_dream_by_uid',  { params: { ...requestData } });
   }
 
   public getLatestDreams(requestData: LatestDreamsRequest): AxiosPromise<LatestDreamsResponse> {
