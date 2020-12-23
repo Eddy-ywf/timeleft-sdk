@@ -64,7 +64,7 @@ class DreamApi extends AbstractApi {
   }
 
   public getLatestDreams(requestData: LatestDreamsRequest): AxiosPromise<LatestDreamsResponse> {
-    return this.http.post('dreams-do_get_latest_dreams', { "data": requestData });
+    return this.http.get('dreams-do_get_latest_dreams', { params: { ...requestData } });
   }
 
   public getPopularDreamsOfWeek(requestData: PopularDreamsRequest): AxiosPromise<PopularDreamsResponse> {
