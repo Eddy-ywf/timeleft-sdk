@@ -20,6 +20,8 @@ import LatestDreamsRequest from '../RequestModel/IGetLatestDreamsRequest';
 import LatestDreamsResponse from '../ResponseModel/IGetLatestDreamsResponse';
 import PopularDreamsRequest from '../RequestModel/IGetPopularDreamsRequest';
 import PopularDreamsResponse from '../ResponseModel/IGetPopularDreamsResponse';
+import SearchDreamsRequest from '../RequestModel/ISearchDreamRequest';
+import SearchDreamsResponse from '../ResponseModel/ISearchDreamResponse';
 
 class DreamApi extends AbstractApi {
 
@@ -69,6 +71,10 @@ class DreamApi extends AbstractApi {
 
   public getPopularDreamsOfWeek(requestData: PopularDreamsRequest): AxiosPromise<PopularDreamsResponse> {
     return this.http.post('dreams-do_get_popular_dreams_of_the_week', { "data": requestData });
+  }
+
+  public searchDream(requestData: SearchDreamsRequest): AxiosPromise<SearchDreamsResponse> {
+    return this.http.get('algolia-do_search_dream', { params: { ...requestData } })
   }
 }
 
