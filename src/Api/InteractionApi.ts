@@ -3,6 +3,7 @@ import { AxiosPromise } from 'axios';
 import InteractionRequest from '../RequestModel/IInteractionRequest';
 import InteractionResponse from '../ResponseModel/IInteractionResponse';
 import OrganisedUserInteractionsResponse from '../ResponseModel/IOrganisedUserInteractionsResponse';
+import OrganisedUserInteractionsRequest from '../RequestModel/IGetInteractionsRequest';
 
 class InteractionApi extends AbstractApi {
 
@@ -14,8 +15,8 @@ class InteractionApi extends AbstractApi {
       return this.http.post('interactions-do_create_interaction', {"data": requestData});
   }
 
-  public getAllInteractions(): AxiosPromise<OrganisedUserInteractionsResponse> {
-    return this.http.post('interactions-do_get_all_interactions_of_an_user', {"data": {}});
+  public getAllInteractions(requestData: OrganisedUserInteractionsRequest): AxiosPromise<OrganisedUserInteractionsResponse> {
+    return this.http.post('interactions-do_get_all_interactions_of_an_user', {"data": requestData});
   }
 }
 
