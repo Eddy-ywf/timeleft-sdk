@@ -70,7 +70,7 @@ class DreamApi extends AbstractApi {
   }
 
   public getPopularDreamsOfWeek(requestData: PopularDreamsRequest): AxiosPromise<PopularDreamsResponse> {
-    return this.http.post('dreams-do_get_popular_dreams_of_the_week', { "data": requestData });
+    return this.http.get('dreams-do_get_popular_dreams_of_the_week', { params: { ...requestData } });
   }
 
   public searchDream(requestData: SearchDreamsRequest): AxiosPromise<SearchDreamsResponse> {
