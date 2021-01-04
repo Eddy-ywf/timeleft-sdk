@@ -5,7 +5,8 @@ import UserResponse from '../ResponseModel/IUserResponse';
 import MyProfileResponse from '../ResponseModel/IMyProfileResponse';
 import PublicProfileRequest from '../RequestModel/IPublicUserRequest';
 import PublicProfileResponse from '../ResponseModel/IPublicUserResponse';
-
+import SearchUsersRequest from '../RequestModel/ISearchUserRequest';
+import SearchUsersResponse from '../ResponseModel/ISearchUserResponse';
 class UserApi extends AbstractApi {
 
   // --------------------------------------------------------------------------------------------
@@ -22,6 +23,10 @@ class UserApi extends AbstractApi {
 
   public getUserByUid(requestData: PublicProfileRequest): AxiosPromise<PublicProfileResponse> {
     return this.http.post('user-do_get_profile_by_uid', {"data": requestData});
+  }
+
+  public searchUser(requestData: SearchUsersRequest): AxiosPromise<SearchUsersResponse> {
+    return this.http.get('algolia-do_search_user', { params: { ...requestData } }  );
   }
 }
 
