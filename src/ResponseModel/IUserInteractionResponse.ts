@@ -1,3 +1,4 @@
+import AnswerMResponse from './IAnswerMResponse';
 import { FeelingPartialResponse } from './IFeelingResponse';
 import LanguageResponse from './ILanguageResponse';
 import { UserPublic } from './IUserPublicResponse';
@@ -13,6 +14,7 @@ export interface UserInteractionResponse {
     | 'likeDream';
   questionText?: string;
   answerText?: string;
+  allAnswers?: AnswerMResponse[];
   feeling?: FeelingPartialResponse;
   date: string;
   sentence?: string;
