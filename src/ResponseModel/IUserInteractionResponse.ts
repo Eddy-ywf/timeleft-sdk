@@ -13,8 +13,10 @@ export interface UserInteractionResponse {
     | 'doneDream'
     | 'likeDream';
   questionText?: string;
+  questionUid?: string;
   answerText?: string;
   allAnswers?: AnswerMResponse[];
+  answerUid?: string;
   feeling?: FeelingPartialResponse;
   date: string;
   sentence?: string;
@@ -23,4 +25,5 @@ export interface UserInteractionResponse {
 
 export interface DreamPartial {
   title: LanguageResponse[];
+  uid?: string;
 }
