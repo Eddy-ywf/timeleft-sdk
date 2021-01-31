@@ -1,9 +1,9 @@
 import { FeelingPartialResponse } from './IFeelingResponse';
 import LanguageResponse from './ILanguageResponse';
-import { UserPartial } from './IUserPublicResponse';
+import { UserPublic } from './IUserPublicResponse';
 
 export interface UserInteractionResponse {
-  user?: UserPartial;
+  user?: UserPublic;
   dream: DreamPartial;
   type:
     | 'askQuestion'
