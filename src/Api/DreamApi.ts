@@ -50,7 +50,7 @@ class DreamApi extends AbstractApi {
   }
 
   public getMyDoneDreams(requestData: DoneDreamsRequest): AxiosPromise<DoneDreamResponse> {
-    return this.http.post('dreams-do_get_done_dreams', { "data": requestData });
+    return this.http.post('dreams-do_get_my_done_dreams', { "data": requestData });
   }
 
   public getShuffle(requestData: ShuffleRequest): AxiosPromise<ShuffleResponse> {
