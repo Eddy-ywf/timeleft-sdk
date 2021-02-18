@@ -11,7 +11,7 @@ class CategoryApi extends AbstractApi {
   // --------------------------------------------------------------------------------------------
 
   public getDreamsOfCategory(requestData: DreamsOfCategoryRequest): AxiosPromise<DreamsOfCategoryResponse> {
-    return this.http.post('do_get_all_dreams_of_category', {"data": requestData});
+    return this.http.post('categories-do_get_all_dreams_of_category', {"data": requestData});
   }
 
   public getAllCategories(): AxiosPromise<GetAllCategoriesResponse> {

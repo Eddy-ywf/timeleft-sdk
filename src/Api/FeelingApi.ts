@@ -9,6 +9,8 @@ import GetFeelingsOfDreamResponse from '../ResponseModel/IGetFeelingOfDreamRespo
 import EmojisCountersRequest from '../RequestModel/IEmojiCountersRequest';
 import EmojisCountersResponse from '../ResponseModel/IEmojiCountersResponse';
 import GetFeelingsOfDreamRequest from '../RequestModel/IGetFeelingOfDreamRequest';
+import FeelingByUIdOfDreamRequest from '../RequestModel/IFeelingByUIdOfDreamRequest';
+import { FeelingResponse } from '../ResponseModel/IFeelingResponse';
 
 class FeelingApi extends AbstractApi {
 
@@ -30,6 +32,10 @@ class FeelingApi extends AbstractApi {
 
   public getFeelingOfDream(requestData: GetFeelingsOfDreamRequest): AxiosPromise<GetFeelingsOfDreamResponse> {
     return this.http.post('feelings-do_get_feelings_of_dream', {"data": requestData});
+  }
+
+  public getFeelingByUidOfDream(requestData: FeelingByUIdOfDreamRequest): AxiosPromise<FeelingResponse> {
+    return this.http.get('feelings-do_get_feeling_by_uid', {params: { ...requestData }});
   }
 
   public getEmojiCounters(requestData: EmojisCountersRequest): AxiosPromise<EmojisCountersResponse> {
