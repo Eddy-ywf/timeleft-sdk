@@ -4,7 +4,7 @@ import CreateQuestionRequest from '../RequestModel/ICreateQuestionRequest';
 import CreateQuestionResponse from '../ResponseModel/ICreateQuestionResponse';
 import CreateAnswerRequest from '../RequestModel/ICreateAnswerRequest';
 import CreateAnswerResponse from '../ResponseModel/ICreateAnswerResponse';
-import { GetAllQuestionsOfADreamRequest } from '../RequestModel/IGetAllQuestionsOfADreamRequest';
+import { GetAllQuestionsOfADreamRequest, GetQuestionByUIdOfDreamRequest } from '../RequestModel/IGetAllQuestionsOfADreamRequest';
 import QuestionResponse from '../ResponseModel/IQuestionResponse';
 
 class QuestionApi extends AbstractApi {
@@ -25,7 +25,7 @@ class QuestionApi extends AbstractApi {
     return this.http.get('questions-do_get_question_by_uid', {params: { ...requestData }});
   }
 
-  public getQuestionByUidOfDream(requestData: GetAllQuestionsOfADreamRequest): AxiosPromise<QuestionResponse> {
+  public getQuestionByUidOfDream(requestData: GetQuestionByUIdOfDreamRequest): AxiosPromise<QuestionResponse> {
     return this.http.get('questions-do_get_all_questions_of_a_dream', {params: { ...requestData }});
   }
 }
