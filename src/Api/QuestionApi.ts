@@ -4,7 +4,7 @@ import CreateQuestionRequest from '../RequestModel/ICreateQuestionRequest';
 import CreateQuestionResponse from '../ResponseModel/ICreateQuestionResponse';
 import CreateAnswerRequest from '../RequestModel/ICreateAnswerRequest';
 import CreateAnswerResponse from '../ResponseModel/ICreateAnswerResponse';
-import GetAllQuestionsOfADreamRequest from '../RequestModel/IGetAllQuestionsOfADreamRequest';
+import { GetAllQuestionsOfADreamRequest } from '../RequestModel/IGetAllQuestionsOfADreamRequest';
 import QuestionResponse from '../ResponseModel/IQuestionResponse';
 
 class QuestionApi extends AbstractApi {

@@ -1,8 +1,13 @@
-export default interface GetAllQuestionsOfADreamRequest {
+interface GetAllQuestionsOfADreamRequest {
   dreamUid: string;
 }
 
-export default interface GetQuestionByUIdOfDreamRequest {
+interface GetQuestionByUIdOfDreamRequest {
   dreamUid: string,
   questionUid: string
+}
+
+export {
+  GetQuestionByUIdOfDreamRequest,
+  GetAllQuestionsOfADreamRequest
 }
