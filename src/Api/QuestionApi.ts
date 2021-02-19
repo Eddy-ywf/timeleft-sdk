@@ -22,11 +22,11 @@ class QuestionApi extends AbstractApi {
   }
 
   public getQuestionsOfDream(requestData: GetAllQuestionsOfADreamRequest): AxiosPromise<QuestionResponse[]> {
-    return this.http.get('questions-do_get_question_by_uid', {params: { ...requestData }});
+    return this.http.get('questions-do_get_all_questions_of_a_dream', {params: { ...requestData }});
   }
 
   public getQuestionByUidOfDream(requestData: GetQuestionByUIdOfDreamRequest): AxiosPromise<QuestionResponse> {
-    return this.http.get('questions-do_get_all_questions_of_a_dream', {params: { ...requestData }});
+    return this.http.get('questions-do_get_question_by_uid', {params: { ...requestData }});
   }
 }
 
