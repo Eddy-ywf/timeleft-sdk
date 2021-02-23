@@ -10,4 +10,6 @@ export default interface QuestionResponse {
   upVotesTotal: number;
   downVotesTotal: number;
   answers: AnswerResponse[];
+  upVotedBy?: string[];
+  downVotedBy?: string[];
 }
