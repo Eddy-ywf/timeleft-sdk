@@ -11,4 +11,5 @@ export default interface DreamResponse {
   usersDoneCounter: number;
   usersLikesCounter: number;
   isEasy: boolean;
+  classBox?: string;
 }
