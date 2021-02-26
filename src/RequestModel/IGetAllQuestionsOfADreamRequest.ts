@@ -3,7 +3,6 @@ interface GetAllQuestionsOfADreamRequest {
 }
 
 interface GetQuestionByUIdOfDreamRequest {
-  dreamUid: string,
   questionUid: string
 }
 

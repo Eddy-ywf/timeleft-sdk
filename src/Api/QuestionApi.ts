@@ -25,8 +25,8 @@ class QuestionApi extends AbstractApi {
     return this.http.get('questions-do_get_all_questions_of_a_dream', {params: { ...requestData }});
   }
 
-  public getQuestionByUidOfDream(requestData: GetQuestionByUIdOfDreamRequest): AxiosPromise<QuestionResponse> {
-    return this.http.get('questions-do_get_question_by_uid', {params: { ...requestData }});
+  public getQuestionByUid(requestData: GetQuestionByUIdOfDreamRequest): AxiosPromise<QuestionResponse> {
+    return this.http.post('questions-do_get_question_by_id',  {"data": requestData});
   }
 }
 

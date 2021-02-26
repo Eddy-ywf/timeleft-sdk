@@ -11,5 +11,7 @@ export default interface DreamResponse {
   usersDoneCounter: number;
   usersLikesCounter: number;
   isEasy: boolean;
+  likesBy?: string[];
+  donesBy?: string[];
   classBox?: string;
 }
