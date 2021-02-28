@@ -6,4 +6,5 @@ export default interface CategoryResponse {
   image: string;
   length: number;
   creationDate: string;
+  isToValidate?: boolean;
 }
