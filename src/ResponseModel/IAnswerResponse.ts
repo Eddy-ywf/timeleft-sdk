@@ -1,7 +1,10 @@
-import LanguageResponse from "./ILanguageResponse";
+import { UserPublic } from './IUserPublicResponse';
 
 export default interface AnswerResponse {
   uid: string;
   creationDate: string;
-  content: LanguageResponse[];
+  text: string;
+  dreamUid: string;
+  questionUid: string;
+  owner: UserPublic;
 }
