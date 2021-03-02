@@ -7,4 +7,6 @@ export default interface DreamsOfCategoryResponse {
   length: number;
   creationDate: string;
   dreams: DreamResponse[];
+  currentPage: number;
+  maxPage: number;
 }
