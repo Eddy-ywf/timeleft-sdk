@@ -18,6 +18,7 @@ export interface FeelingResponse {
 }
 
 export interface FeelingPartialResponse {
+  uid?: string;
   title?: string;
   emojis?: EmojiResponse[];
   images: ImageResponse[];

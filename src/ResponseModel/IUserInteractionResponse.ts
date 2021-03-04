@@ -25,5 +25,5 @@ export interface UserInteractionResponse {
 
 export interface DreamPartial {
   title: LanguageResponse[];
-  uid?: string;
+  dreamUid?: string;
 }

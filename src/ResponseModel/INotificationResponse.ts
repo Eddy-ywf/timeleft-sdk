@@ -17,4 +17,7 @@ export interface NotificationResponse {
   feelingUid?: string;
 }
 
-export type notificationTypeResponse = 'userAnsweredToOneOfYourQuestion' | 'anotherAnswerInOneQuestionIFollow' | 'oneUserLikedOneOfMyFeelings';
+export type notificationTypeResponse =
+  | 'userAnsweredToOneOfYourQuestion'
+  | 'anotherAnswerInOneQuestionIFollow'
+  | 'oneUserLikedOneOfMyFeelings';
