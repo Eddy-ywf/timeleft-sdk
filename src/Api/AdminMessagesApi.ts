@@ -9,8 +9,8 @@ class AdminMessagesApi extends AbstractApi {
   // Public methods
   // --------------------------------------------------------------------------------------------
 
-  public getNewsLetterSetting(requestData: SendMessageToAdminRequest): AxiosPromise<SendMessageToAdminResponse> {
-    return this.http.post('messages-do_send_message_to_admin', {"data": {requestData}});
+  public sendMessageToAdmin(requestData: SendMessageToAdminRequest): AxiosPromise<SendMessageToAdminResponse> {
+    return this.http.post('messages-do_send_message_to_admin', {"data": requestData});
   }
 
 }
