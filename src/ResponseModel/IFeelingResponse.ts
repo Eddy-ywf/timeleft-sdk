@@ -14,6 +14,8 @@ export interface FeelingResponse {
   dreamUid: string;
   uid: string;
   likesTotal: number;
+  likedBy?: string[];
+  dislikedBy?: string[];
   dans?: string;
 }
 
