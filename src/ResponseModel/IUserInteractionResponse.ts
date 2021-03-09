@@ -21,6 +21,8 @@ export interface UserInteractionResponse {
   date: string;
   sentence?: string;
   uid?: string;
+  questionUpvotes?: number;
+  questionDownvotes?: number;
 }
 
 export interface DreamPartial {
