@@ -26,4 +26,6 @@ export interface FeelingPartialResponse {
   images: ImageResponse[];
   audios: AudioResponse[];
   likesTotal: number;
+  likedBy?: string[];
+  dislikedBy?: string[];
 }

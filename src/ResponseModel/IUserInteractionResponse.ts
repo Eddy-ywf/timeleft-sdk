@@ -23,6 +23,8 @@ export interface UserInteractionResponse {
   uid?: string;
   questionUpvotes?: number;
   questionDownvotes?: number;
+  downVotedBy?: string[];
+  upVotedBy?: string[];
 }
 
 export interface DreamPartial {
