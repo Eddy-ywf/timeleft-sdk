@@ -11,5 +11,6 @@ export default interface PublicProfileResponse {
   availableToHelp?: boolean;
   likes: DreamResponse[];
   done: DreamResponse[];
+  profilCompleted: boolean;
   points: number;
 }
