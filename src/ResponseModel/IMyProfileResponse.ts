@@ -16,5 +16,6 @@ export default interface MyProfileResponse {
   birthdate?: string;
   likes: DreamResponse[];
   done: DreamResponse[];
+  profilCompleted: boolean;
   points: number;
 }
