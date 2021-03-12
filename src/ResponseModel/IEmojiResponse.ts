@@ -6,4 +6,5 @@ export default interface EmojiResponse {
   icon: string;
   content: LanguageResponse[];
   background: string;
+  isActive?: boolean;
 }
