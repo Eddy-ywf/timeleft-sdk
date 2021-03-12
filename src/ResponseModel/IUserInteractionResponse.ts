@@ -23,8 +23,8 @@ export interface UserInteractionResponse {
   uid?: string;
   questionUpvotes?: number;
   questionDownvotes?: number;
-  downVotedBy?: string[];
-  upVotedBy?: string[];
+  questionAlreadyUpVotedByMainUser: boolean;
+  questionAlreadyDownVotedByMainUser: boolean;
 }
 
 export interface DreamPartial {

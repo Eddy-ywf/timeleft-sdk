@@ -16,6 +16,7 @@ export interface FeelingResponse {
   likesTotal: number;
   likedBy?: string[];
   dislikedBy?: string[];
+  likedByTheMainUser: boolean;
   dans?: string;
 }
 
@@ -26,6 +27,5 @@ export interface FeelingPartialResponse {
   images: ImageResponse[];
   audios: AudioResponse[];
   likesTotal: number;
-  likedBy?: string[];
-  dislikedBy?: string[];
+  likedByTheMainUser: boolean;
 }
