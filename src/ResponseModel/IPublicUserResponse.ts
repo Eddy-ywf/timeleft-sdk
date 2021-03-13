@@ -13,4 +13,6 @@ export default interface PublicProfileResponse {
   done: DreamResponse[];
   profilCompleted: boolean;
   points: number;
+  isOnline?: boolean;
+  message?: string;
 }
