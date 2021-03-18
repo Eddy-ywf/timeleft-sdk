@@ -15,4 +15,5 @@ export default interface PublicProfileResponse {
   points: number;
   isOnline?: boolean;
   message?: string;
+  isRead?: boolean;
 }
