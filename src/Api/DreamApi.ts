@@ -1,27 +1,27 @@
-import AbstractApi from './AbstractApi';
 import { AxiosPromise } from 'axios';
-import DreamRequest from '../RequestModel/IDreamRequest';
-import DreamResponse from '../ResponseModel/IDreamResponse';
-import LikeRequest from '../RequestModel/ILikeDreamRequest';
-import LikeResponse from '../ResponseModel/ILikeDreamResponse';
 import DislikeRequest from '../RequestModel/IDislikeDreamRequest';
-import DislikeResponse from '../ResponseModel/IDislikeDreamResponse';
 import DoneRequest from '../RequestModel/IDoneDreamRequest';
-import DoneDreamResponse from '../ResponseModel/IDoneDreamResponse';
-import LikedDreamsRequest from '../RequestModel/IMyLikeDreamRequest';
-import LikedDreamsResponse from '../ResponseModel/IMyLikeDreamResponse';
-import DoneDreamsRequest from '../RequestModel/IMyDoneDreamRequest';
-import ShuffleRequest from '../RequestModel/IShuffleRequest';
-import ShuffleResponse from '../ResponseModel/IShuffleResponse';
-import EasyResponse from '../ResponseModel/IEasyDreamResponse';
+import DreamRequest from '../RequestModel/IDreamRequest';
 import GetDreamByUidRequest from '../RequestModel/IGetDreamByUidRequest';
-import GetDreamByUidResponse from '../ResponseModel/IGetDreamByUidResponse';
 import LatestDreamsRequest from '../RequestModel/IGetLatestDreamsRequest';
-import LatestDreamsResponse from '../ResponseModel/IGetLatestDreamsResponse';
 import PopularDreamsRequest from '../RequestModel/IGetPopularDreamsRequest';
-import PopularDreamsResponse from '../ResponseModel/IGetPopularDreamsResponse';
+import LikeRequest from '../RequestModel/ILikeDreamRequest';
+import DoneDreamsRequest from '../RequestModel/IMyDoneDreamRequest';
+import LikedDreamsRequest from '../RequestModel/IMyLikeDreamRequest';
 import SearchDreamsRequest from '../RequestModel/ISearchDreamRequest';
+import ShuffleRequest from '../RequestModel/IShuffleRequest';
+import DislikeResponse from '../ResponseModel/IDislikeDreamResponse';
+import DoneDreamResponse from '../ResponseModel/IDoneDreamResponse';
+import DreamResponse from '../ResponseModel/IDreamResponse';
+import EasyResponse from '../ResponseModel/IEasyDreamResponse';
+import FullDreamResponse from '../ResponseModel/IFullDreamResponse';
+import GetDreamByUidResponse from '../ResponseModel/IGetDreamByUidResponse';
+import LatestDreamsResponse from '../ResponseModel/IGetLatestDreamsResponse';
+import LikeResponse from '../ResponseModel/ILikeDreamResponse';
+import LikedDreamsResponse from '../ResponseModel/IMyLikeDreamResponse';
 import SearchDreamsResponse from '../ResponseModel/ISearchDreamResponse';
+import ShuffleResponse from '../ResponseModel/IShuffleResponse';
+import AbstractApi from './AbstractApi';
 
 class DreamApi extends AbstractApi {
 
@@ -75,7 +75,7 @@ class DreamApi extends AbstractApi {
     return this.http.get('dreams-do_get_latest_dreams', { params: { ...requestData } });
   }
 
-  public getPopularDreamsOfWeek(requestData: PopularDreamsRequest): AxiosPromise<PopularDreamsResponse> {
+  public getPopularDreamsOfWeek(requestData: PopularDreamsRequest): AxiosPromise<FullDreamResponse[]> {
     return this.http.get('dreams-do_get_popular_dreams_of_the_week', { params: { ...requestData } });
   }
 
