@@ -1,5 +1,6 @@
 import Axios, { AxiosInstance } from 'axios';
 import Environment from '../Enum/Environment';
+import { endPoint } from '../FirebaseConfig/env';
 // import { transformRequest, transformResponse } from '../Utility/DataTransformUtility';
 
 abstract class AbstractApi {
@@ -18,11 +19,8 @@ abstract class AbstractApi {
   // Private Properties will correct all later
   // --------------------------------------------------------------------------------------------
 
-  private readonly ENDPOINT_DEV: string = 'https://europe-west3-timeleft-7fa83.cloudfunctions.net';
-  private readonly ENDPOINT_STAGING: string = 'https://europe-west3-timeleft-7fa83.cloudfunctions.net';
-  private readonly ENDPOINT_LIVE: string = 'https://europe-west3-timeleft-7fa83.cloudfunctions.net';
-  private readonly MOCK_LOCAL: string = 'https://europe-west3-timeleft-7fa83.cloudfunctions.net';
-  private readonly MOCK_ONLINE: string = 'https://europe-west3-timeleft-7fa83.cloudfunctions.net';
+  private readonly ENDPOINT_DEV: string = endPoint.development;
+  private readonly ENDPOINT_LIVE: string = endPoint.production;
 
   // --------------------------------------------------------------------------------------------
   // Magic methods
@@ -38,17 +36,8 @@ abstract class AbstractApi {
       case Environment.DEVELOPMENT:
         baseUrl = this.ENDPOINT_DEV;
         break;
-      case Environment.STAGING:
-        baseUrl = this.ENDPOINT_STAGING;
-        break;
       case Environment.PRODUCTION:
         baseUrl = this.ENDPOINT_LIVE;
-        break;
-      case Environment.MOCK_LOCAL:
-        baseUrl = this.MOCK_LOCAL;
-        break;
-      case Environment.MOCK_ONLINE:
-        baseUrl = this.MOCK_ONLINE;
         break;
       default:
         throw new Error(`Invalid env "${env}" value`);
