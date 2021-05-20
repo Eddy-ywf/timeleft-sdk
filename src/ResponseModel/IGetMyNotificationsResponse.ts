@@ -19,3 +19,7 @@ export interface SetNotificationAsViewedResponse {
 export interface NotificationCreationResponse {
   info: 'ok';
 }
+
+export interface NotificationDeleteResponse {
+  info: 'ok';
+}

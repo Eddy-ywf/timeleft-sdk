@@ -31,3 +31,7 @@ export interface NotificationCreationRequest {
   answerUid?: string;
   feelingUid?: string;
 }
+
+export interface NoticeDeleteRequest {
+  notificationId: string;
+}
