@@ -23,3 +23,6 @@ export interface NotificationCreationResponse {
 export interface NotificationDeleteResponse {
   info: 'ok';
 }
+
+export interface NotificationSendToChatUserResponse
+  extends NotificationDeleteResponse {}

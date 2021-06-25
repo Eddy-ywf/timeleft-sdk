@@ -7,6 +7,9 @@ import PublicProfileRequest from '../RequestModel/IPublicUserRequest';
 import PublicProfileResponse from '../ResponseModel/IPublicUserResponse';
 import SearchUsersRequest from '../RequestModel/ISearchUserRequest';
 import SearchUsersResponse from '../ResponseModel/ISearchUserResponse';
+import deleteUserRequest from '../RequestModel/IDeleteUserRequest';
+import ISendMailRequest from '../RequestModel/ISendMailRequest';
+import ISendMailResponse from '../ResponseModel/ISendMailResponse';
 class UserApi extends AbstractApi {
 
   // --------------------------------------------------------------------------------------------
@@ -27,6 +30,19 @@ class UserApi extends AbstractApi {
 
   public searchUser(requestData: SearchUsersRequest): AxiosPromise<SearchUsersResponse> {
     return this.http.get('algolia-do_search_user', { params: { ...requestData } }  );
+  }
+
+   // deleted account email password
+  public deleteAccount(requestData: deleteUserRequest): AxiosPromise<any> {
+    return this.http.post('user-do_delete_user', { data: requestData });
+  }
+
+  public sendMailToUser(
+    requestData: ISendMailRequest
+  ): AxiosPromise<ISendMailResponse> {
+    return this.http.post('notifications-do_create_send_email', {
+      data: { ...requestData }
+    });
   }
 }
 

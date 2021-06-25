@@ -35,3 +35,8 @@ export interface NotificationCreationRequest {
 export interface NoticeDeleteRequest {
   notificationId: string;
 }
+
+export interface SendEmailToChatUser {
+  senderUid: string;
+  receiverUid: string;
+}
