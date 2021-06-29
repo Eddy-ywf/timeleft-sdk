@@ -34,7 +34,7 @@ class UserApi extends AbstractApi {
 
    // deleted account email password
   public deleteAccount(requestData: deleteUserRequest): AxiosPromise<any> {
-    return this.http.post('user-do_delete_user', { data: requestData });
+    return this.http.post('user-do_delete_my_account', { data: requestData });
   }
 
   public sendMailToUser(
