@@ -16,6 +16,10 @@ export interface RegisterDeviceRequest {
   token: string;
 }
 
+export interface RegisterDeviceTokenRequest {
+  deviceToken: string;
+}
+
 export interface SetNotificationAsViewedRequest {
   notificationUid: string;
 }

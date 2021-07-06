@@ -1,6 +1,6 @@
 import { AxiosPromise } from 'axios';
 import AbstractApi from './AbstractApi';
-import { GetMyNotificationsRequest, NoticeDeleteRequest, NotificationCreationRequest, RegisterDeviceRequest, SendEmailToChatUser, SetNotificationAsViewedRequest } from '../RequestModel/IGetMyNotificationsRequest';
+import { GetMyNotificationsRequest, NoticeDeleteRequest, NotificationCreationRequest, RegisterDeviceRequest, RegisterDeviceTokenRequest, SendEmailToChatUser, SetNotificationAsViewedRequest } from '../RequestModel/IGetMyNotificationsRequest';
 import { GetMyNotificationsResponse, NotificationCreationResponse, NotificationDeleteResponse, NotificationSendToChatUserResponse, RegisterDeviceResponse, SetNotificationAsViewedResponse } from '../ResponseModel/IGetMyNotificationsResponse';
 
 
@@ -14,6 +14,14 @@ class NotificationsApi extends AbstractApi {
     requestData: GetMyNotificationsRequest
   ): AxiosPromise<GetMyNotificationsResponse> {
     return this.http.post('notifications-do_get_my_notifications', {
+      data: requestData,
+    });
+  }
+
+  public registerDeviceToken(
+    requestData: RegisterDeviceTokenRequest
+  ): AxiosPromise<any> {
+    return this.http.post('notifications-do_register_device_token', {
       data: requestData,
     });
   }
@@ -54,7 +62,7 @@ class NotificationsApi extends AbstractApi {
     requestData: SendEmailToChatUser
   ): AxiosPromise<NotificationSendToChatUserResponse> {
     return this.http.post('notifications-do_send_mail_to_chat_user', {
-      data: requestData
+      data: requestData,
     });
   }
 }
