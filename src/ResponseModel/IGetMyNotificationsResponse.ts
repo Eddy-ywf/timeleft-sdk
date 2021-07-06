@@ -12,6 +12,11 @@ export interface RegisterDeviceResponse {
   info: 'ok';
 }
 
+export interface RegisterDeviceTokenResponse {
+  info: 'created';
+  deviceTokenUid: string;
+}
+
 export interface SetNotificationAsViewedResponse {
   info: 'ok';
 }
