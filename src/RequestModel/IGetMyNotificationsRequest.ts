@@ -43,4 +43,5 @@ export interface NoticeDeleteRequest {
 export interface SendEmailToChatUser {
   senderUid: string;
   receiverUid: string;
+  chatMessage: string;
 }
