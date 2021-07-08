@@ -2,7 +2,7 @@ import ImageRequest from './IImageRequest';
 import LanguageRequest from './ILanguageRequest';
 
 export type NotificationType =
-  'userAnsweredToOneOfYourQuestion'
+  | 'userAnsweredToOneOfYourQuestion'
   | 'anotherAnswerInOneQuestionIFollow'
   | 'oneUserLikedOneOfMyFeelings'
   | 'other';
@@ -44,4 +44,5 @@ export interface SendEmailToChatUser {
   senderUid: string;
   receiverUid: string;
   chatMessage: string;
+  groupUid: string;
 }
