@@ -32,4 +32,6 @@ export interface NotificationDeleteResponse {
 export interface NotificationSendToChatUserResponse
   extends NotificationDeleteResponse {}
 
-export interface deleteDeviceTokenResponse extends NotificationDeleteResponse {}
+export interface deleteDeviceTokenResponse {
+  info: 'removed';
+}
